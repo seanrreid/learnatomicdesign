@@ -1,0 +1,61 @@
+.search-form {
+	@include outer-container(768px);
+	@include drop-shadow(1px, 1px, 2px, 0, rgba($black, 0.5));
+
+	label {
+		background-color: transparent;
+		float: left;
+		margin-left: -9999px;
+	}
+
+	.search-field {
+		position: relative;
+		padding: em(12);
+		margin: 0 auto;
+		-webkit-border-radius: 2px 0 0 2px;
+		border-radius: 2px 0 0 2px;
+
+	}
+
+	.wrapper--input {
+		@include inline-input(40px);
+		position: relative;
+		border-right: 0;
+	}
+}
+
+.contact-form {
+	margin-top: 1.5em;
+
+	input,
+	textarea {
+		background-color: #efefef;
+	}
+
+	.honey-captcha {
+		@extend %cleaner-offscreen-text;
+		height: 0;
+		width: 0;
+
+		.input-field {
+			position: absolute;
+			left: -9999px;
+		}
+	}
+
+	.form-group {
+		margin-bottom: 1em;
+	}
+}
+
+.error {
+	border: solid 1px $error-color !important;
+}
+
+.error-message {
+	line-height: 1;
+	float: left;
+	color: $error-color;
+	margin: -8px 4px 0;
+}
+

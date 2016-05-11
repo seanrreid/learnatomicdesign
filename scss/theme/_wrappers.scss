@@ -1,0 +1,34 @@
+/* Wrappers */
+.wrapper--logo {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	line-height: 1;
+}
+
+.wrapper--alerts {
+    position: relative;
+    height: auto;
+    width: 100%;
+    z-index: 9999;
+
+    @include media($medium-screen) {
+        position: fixed;
+        max-width: 60%;
+        margin-left: 20%;
+        margin-top: rem(72);
+    }
+}
+
+.wrapper--form {
+    @include outer-container(800px);
+}
+
+.wrapper__text {
+  display: inline-block;
+
+  p {
+    max-width: 52em;
+  }
+}
+

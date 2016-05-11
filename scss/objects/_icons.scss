@@ -1,0 +1,36 @@
+.icon {
+	position: relative;
+	display: inline-block;
+	margin-right: em(4);
+	text-align: center;
+	max-height: 2rem;
+	max-width: 2rem;
+}
+
+a > .icon {
+	cursor: pointer;
+}
+
+.btn > .icon {
+	margin: 0;
+}
+
+.icon--circle {
+	@extend .icon;
+	padding: 4px 0;
+	font-size: 12px;
+	height: 24px;
+	width: 24px;
+	border: solid 2px $black;
+	border-radius: 50%;
+
+	&.icon-close {
+		color: $error-color;
+		border-color: $error-color
+	}
+
+	&.icon-checkmark {
+		color: $success-color;
+		border-color: $success-color;
+	}
+}

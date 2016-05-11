@@ -1,0 +1,11 @@
+/* Sections */
+section {
+	background-color: $white;
+}
+
+.content {
+	@include outer-container(100%);
+	min-height: 70vh;
+	padding-top: 0;
+	padding-bottom: 3em;
+}

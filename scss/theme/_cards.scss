@@ -1,0 +1,44 @@
+/* Cards */
+.cards {
+  background-color: $white;
+  margin: 0 auto;
+}
+
+.card {
+	@include justify-content(center);
+	@include align-items(center);
+	position: relative;
+	box-shadow: 0 1px 2px color($gray-map, base);
+	border-radius: 1px;
+	padding: 0;
+  	margin: rem(8) rem(2);
+}
+
+.card-wrapper {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+
+.card-image {
+	background-color: color($gray-map, light);
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0.95;
+	position: relative;
+	padding: rem(8);
+	min-height: rem(250);
+	min-width: rem(250);
+}
+
+.card-copy {
+  	position: relative;
+  	width: 100%;
+  	padding: em(8) em(4);
+  	background-color: $ctaColor;
+	color: $white;
+	line-height: 1;
+	text-align: center;
+	font-size: rem(18);
+	text-transform: uppercase;
+}

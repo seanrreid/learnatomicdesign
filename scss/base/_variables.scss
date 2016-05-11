@@ -1,0 +1,64 @@
+// Demo Mode?
+$demo-mode : false !default;
+//$demo-mode : true;
+
+//Layout
+$max-width : 70rem;
+
+//Defaults
+$pad : 1em;
+$pad-and-half : $pad*1.5;
+$pad-double   : $pad*2;
+$pad-half     : $pad/2;
+$pad-quarter  : $pad/4;
+
+// Gradient
+$gradient-angle : 20deg !default;
+
+// Typography
+@import "webfonts";
+$system-fonts : -apple-system, ".SFNSText-Regular", "San Francisco", "Oxygen", "Ubuntu", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+$georgia      : Georgia,Times,"Times New Roman",serif !default;
+
+$sans-serif            : $system-fonts;
+$serif                 : $georgia;
+$base-font-family      : $sans-serif;
+$header-font-family    : $sans-serif !default;
+$subheader-font-family : $sans-serif !default;
+
+// Font Sizes
+$base-font-size  : 1em;
+$modular-scale-ratio: $major-second;
+$modular-scale-base : $base-font-size;
+
+$small-font-size : modular-scale(-2);
+$h1-font-size    : modular-scale(4);
+$h2-font-size    : modular-scale(3);
+$h3-font-size    : modular-scale(2);
+$h4-font-size    : modular-scale(1);
+$h5-font-size    : modular-scale(0);
+$h6-font-size    : $small-font-size;
+
+// Line height
+$base-line-height   : 1.45;
+$header-line-height : 1.2;
+
+// Other Sizes
+$base-spacing       : $base-line-height * 1rem;
+$base-z-index       : 0;
+$base-spacing       : 1.5em !default;
+$base-border-radius : 4px !default;
+
+// Logo
+$base-logo-px     : 20px;
+$base-logo-height : em(60);
+
+// Navigation
+$sidebarWidth: 15% !default;
+
+// Forms
+$form-font-size     : $base-font-size;
+$form-font-family   : $base-font-family;
+$form-border-radius : $base-border-radius / 2;
+$form-box-shadow    : inset 0 1px 3px rgba($black,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);

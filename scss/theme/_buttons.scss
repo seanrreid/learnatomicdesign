@@ -1,0 +1,82 @@
+.btn--cta {
+	@extend .btn;
+	font-weight: bold;
+	border: none;
+	border-radius: 1px;
+	color: $white;
+	background-color: $base-cta-color;
+	border-bottom: solid 3px $hover-cta-color;
+	max-width: 12em;
+
+
+	&:hover,
+	&:focus {
+		background-color: $hover-cta-color;
+		color: $white;
+	}
+}
+
+.btn--view-gadget {
+	@extend .btn;
+	border-radius: 3px;
+	border-bottom: solid 2px darken($base-button-color, 10%);
+	font-size: em(18);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	width: 100%;
+	max-width: rem(320);
+}
+
+/*
+.btn__nav {
+	@extend .btn;
+	border-radius: 0;
+	background-color: transparent;
+	border: solid 1px transparent;
+	color: $base-button-color;
+
+	@include media($medium-screen) {
+		margin: 0 em(8);
+		border-color: $base-button-color;
+		border-radius: 2em;
+
+		&:active,
+		&:hover,
+		&:focus {
+			background-color: $base-button-color;
+			color: $white;
+		}
+
+		&.btn--register {
+			background-color: $base-button-color;
+			color: $white;
+		}
+
+		&:active,
+		&:hover,
+		&:focus {
+			background-color: darken($base-button-color, 10%);
+		}
+	}
+}
+*/
+
+.btn--submit {
+	@extend button;
+    border: none;
+    padding: em(12);
+    border-radius: 4px;
+	text-transform: uppercase;
+    max-width: em(200);
+}
+
+.btn--search {
+	@extend .btn;
+	@include	iconify-button(40px, right);
+	min-height: 40px;
+	max-height: em(44);
+	font-size: 1em;
+	padding: em(14) em(12) em(12);
+	border-left: 0;
+	font-weight: bold;
+}

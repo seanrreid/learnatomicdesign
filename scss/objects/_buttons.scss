@@ -1,0 +1,29 @@
+/* Buttons */
+button {
+	@extend %button;
+	background-color: $base-button-color;
+	color: white;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $hover-button-color;
+		color: white;
+	}
+}
+
+.btn {
+	@extend button;
+	border: none;
+	display: block;
+	max-width: 100%;
+	font-size: rem(14);
+	line-height: 1.14;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	padding: rem(12) rem(8);
+	cursor: pointer;
+	border-radius: 1rem;
+	text-transform: uppercase;
+}

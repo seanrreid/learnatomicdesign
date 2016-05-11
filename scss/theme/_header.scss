@@ -1,0 +1,25 @@
+/* Header */
+.header {
+	position: relative;
+	background-color: $white;
+  	color: $primaryTextColor;
+
+	.wrapper {
+		@extend .grid__row;
+		@include align-items(center);
+		padding-bottom: 1rem;
+	}
+
+  	.wrapper--logo {
+		max-width: rem(320);
+    	padding: em(8) 1em;
+  	}
+
+  	@include media($medium-screen) {
+    	.wrapper--logo {
+			max-width: rem(360);
+      	float: left;
+      	padding: 0;
+    	}
+  	}
+}

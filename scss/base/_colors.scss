@@ -1,0 +1,66 @@
+// Base Colors
+$black:    #1F1F1F;
+$white:    #fafafa;
+$gray-map: (
+	base:   #545757,
+	light:  #d7d7d7,
+	medium: #b6b6c7,
+	dark:   #727475
+);
+
+// Site Colors
+$darkPrimaryColor:  #2575ae;
+$lightPrimaryColor: #5da9dd; // #e1eefa
+$primaryTextColor:  $black;
+$accentColor:      #7fb539;
+$highlightColor:    #bfd730;
+$ctaColor:          $accentColor;
+$buttonColor:       $darkPrimaryColor;
+$selectedColor:     $lightPrimaryColor;
+
+// Social colors
+$facebook:         #3b5998;
+$facebook-hover:   #8b9dc3;
+$twitter:          #55acee;
+$twitter-hover:    #292f33;
+
+// Input Colors
+$input-focus:      #66afe9;
+
+// Flash Colors
+$success-color:    #4CAF50;
+$alert-color:      lighten($accentColor, 40);
+$error-color:      #E91E63;
+$notice-color:     #FFEB3B;
+
+// Base Colors
+$base-font-color: 		$primaryTextColor;
+$base-background-color: $white !default;
+$base-accent-color:  	$accentColor;
+
+// Link Colors
+$base-link-color: 	 $lightPrimaryColor;
+$hover-link-color: 	 darken($base-link-color, 15%);
+$base-button-color:  $buttonColor;
+$hover-button-color: lighten($base-button-color, 25%);
+$base-cta-color:     $ctaColor;
+$hover-cta-color: 	 darken($base-cta-color, 10%);
+
+// Hero Colors 
+$hero-background-base: color($gray-map, base);
+$hero-color:           $white;
+
+$footer-background: $black;
+$footer-color:      color($gray-map, light);
+$footer-link-color: lighten($lightPrimaryColor, 10);
+$footer-link-hover: transparentize($footer-link-color, 0.1);
+
+// Border color
+$base-border-color: 		color($gray-map,base);
+$featured-border-color: $accentColor;
+$base-border: 1px solid $base-border-color;
+
+// Forms Borders
+$form-border-color: 		  $input-focus;
+$form-border-color-hover: color($gray-map,dark);
+$form-border-color-focus: $input-focus;

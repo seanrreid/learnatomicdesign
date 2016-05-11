@@ -1,0 +1,8 @@
+.page-title {
+	text-transform: capitalize;
+	text-align: center;
+
+	@include media($medium-screen) {
+		text-align: left;
+	}
+}

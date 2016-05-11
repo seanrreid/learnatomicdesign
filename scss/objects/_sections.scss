@@ -1,0 +1,17 @@
+/* Sections */
+// Rules that apply primarily to section elements.
+// Elements contained within sections can be found in the corresponding theme/*.scss file
+
+section[role="main"]{
+	min-height: em(400);
+}
+
+section {
+	@extend .grid__column--12of12;
+	padding: 2rem 0;
+}
+
+.section--breadcrumbs {
+	padding-top: 1rem;
+	padding-bottom: 0;
+}

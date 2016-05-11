@@ -1,0 +1,19 @@
+.animate {
+	animation: jiggle 2s ease-in infinite;
+	color: $ctaColor !important;  // not a fan of this override, but it will work for the moment - SR
+}
+
+@keyframes jiggle {
+	48%, 62% {
+		transform: scale(1.0, 1.0)
+	}
+	50% {
+		transform: scale(1.1, 0.9)
+	}
+	56% {
+		transform: scale(0.9, 1.1) translate(0, -5px)
+	}
+	59% {
+		transform: scale(1.0, 1.0) translate(0, -3px)
+	}
+}

@@ -1,0 +1,31 @@
+// The nav items
+.menu-item {
+	background-color: transparent;
+	float: left;
+
+	.sidebar & {
+		width: 100%;
+		text-align: left;
+		font-size: 1.2em;
+	}
+}
+
+.primary-nav {
+	.menu-item {
+		font-weight: bold;
+		max-width: 50%;
+		text-transform: uppercase;
+
+		@include media($medium-screen) {
+			border: none;
+		}
+	}
+
+	@include media($medium-screen) {
+		float: right;
+	}
+
+	@include media($large-screen) {
+		margin-right: 0;
+	}
+}

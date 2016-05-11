@@ -1,0 +1,177 @@
+@function color($color, $variant) {
+  @if map-has-key($color, $variant) {
+    @return map-get($color, $variant);
+  }
+
+  @warn "Unknown `#{$color}` in $theme-colors.";
+  @return null;
+}
+
+// RWD Tables
+// http://unrealnavigation.com/blog/responsive-tables
+@mixin responsive-tables-large($headings...) {
+  $list: $headings;
+
+  @each $list-headings in $list {
+    $i: index($list, $list-headings);
+    tbody tr td:nth-of-type(#{$i}):before { 
+      content: $list-headings; 
+    }
+    
+    @include media($large-screen) {
+      tbody tr td:nth-of-type(#{$i}):before { 
+        content: ''; 
+      }
+    }
+
+  }
+}
+
+@mixin rwd-first {
+  display: block;
+  
+  tbody {
+    border: none;
+  }
+
+  tbody, th, td, tr, tfoot {
+    display: block; 
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    float: left;
+    width: 100%;
+    margin: 0 0 1em;
+
+    td {
+      // padding: 0.5em 0;
+      float:left;
+      width: 100%;
+      
+      &:before {
+        width: 100%;
+        display: block;
+        float: left;
+        clear: both;
+        // margin: 0 0 0 em(8);
+      }
+    }
+  }
+}
+
+@mixin rwd-second {
+  display: table;
+  border: none;
+
+  th, td {
+    display: table-cell; 
+  }
+
+  tr {
+    display: table-row;
+    float: none;
+    margin: 0;
+    box-shadow: none;
+
+    td {
+      // padding: .75em 0 0.75em .25em;
+      float: none;
+      width: auto;
+
+      &:before {
+        padding: 0 !important;
+      }
+    }
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tbody,tfoot {
+    display: table-row-group;
+  }
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity-ie)";
+}
+
+// Maintain aspect ratio or fit to content http://codepen.io/jakob-e/pen/LEdWNB
+/*** Usage ***
+  div {
+    @include aspect-ratio(16,9);
+    // ...or by simple ratio -> @include aspect-ratio(1.777777778);  
+  }
+**/
+@mixin aspect-ratio($ratio-or-width, $height: null) {
+  $padding: if($height, percentage($height/$ratio-or-width), percentage(1/$ratio-or-width));
+  &:before { content:''; float: left; padding-bottom: $padding;  }
+  &:after  { content:''; display: table; clear: both;  } 
+}
+
+// The following taken from http://sachagreif.com/useful-sass-mixins/
+@mixin navigation-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: table-row;
+
+  > li {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+// Drop Shadow
+@mixin drop-shadow($horizontal, $vertical, $blur, $spread, $color) {
+	box-shadow: $horizontal $vertical $blur $spread $color;
+}
+
+// Inline block input elements
+@mixin inline-input($button-width) {
+	display: inline-block;
+	width: calc(100% - #{$button-width});
+}
+
+// Inline Block Icon Button
+@mixin iconify-button($width,$float) {
+	display: inline-block;
+	float: $float;
+	width: $width;
+	line-height: 1;
+	margin: 0;
+	border-radius: 0;
+}
+
+@mixin center-box($border-color, $height, $width) {
+	border: solid 1px $border-color;
+	display: inline-block;
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);
+	width: $width;
+	height: $height;
+}
+
+// The following by http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}

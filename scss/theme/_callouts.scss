@@ -1,0 +1,15 @@
+// Callout Styles
+.callout--signup {
+	@extend .callout;
+	background-color: $ctaColor;
+	color: $white;
+	display: none;
+
+	@include media($medium-screen) {
+		display: block;
+	}
+
+	p {
+	  margin: 0 auto;
+  	}
+}

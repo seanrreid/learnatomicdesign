@@ -1,0 +1,77 @@
+.alert {
+	background-color: white;
+	border-radius: $base-border-radius;
+	position: relative;
+	width: calc(100% - 3rem);
+	padding: 1em;
+	z-index: 99999;
+  	margin: 0 auto 1rem;
+	float: none;
+  	text-align: center;
+	-webkit-box-shadow: 1px 1px 2px 1px color($gray-map, medium);
+	box-shadow: 1px 1px 2px 1px color($gray-map, medium);
+
+	&::before {
+		padding-top: 1rem;
+	}
+
+	.close {
+		position: absolute;
+		right: 1em;
+		top: calc(33% - 4px);
+		border-radius: 50%;
+		border-color: $black;
+		color: $white;
+		background-color: color($gray-map, dark);
+		width: auto;
+		padding: 8px;
+		text-align: center;
+		line-height: 1;
+		filter: alpha(opacity=50);
+		opacity: .5;
+
+		&:hover,
+		&:focus {
+			color: color($gray-map, light);
+			cursor: pointer;
+			filter: alpha(opacity=80);
+			opacity: .8;
+		}
+	}
+
+	.icon {
+		margin: 0 auto;
+	}
+}
+
+[class*="alert-"]::before {
+	font-family: 'icomoon';
+	font-size: rem(20);
+}
+
+.alert-success {
+  @extend %flash-success;
+
+	&::before {
+		background-color: $success-color;
+		content: "\e83a";
+	}
+}
+
+.alert-info {
+  @extend %flash-alert;
+}
+
+.alert-notice,
+.alert-warning {
+  @extend %flash-notice;
+}
+
+.alert-error {
+  @extend %flash-error;
+
+  &::before {
+	  background-color: $error-color;
+	  content: "\e833";
+  }
+}

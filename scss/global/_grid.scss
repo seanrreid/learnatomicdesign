@@ -1,0 +1,54 @@
+.grid {
+	@include outer-container(100%);
+}
+
+.grid__row {
+	@include outer-container;
+	display: block;
+	@include display(flex);
+	@include justify-content(center);
+	@include align-items(stretch);
+	@include flex-wrap(wrap);
+	@include flex-direction(column);
+	padding: $gutter $gutter 0;
+	margin: -$gutter auto 0;
+
+	&:first-child {
+		margin-top: $gutter;
+	}
+
+	@include media($medium-screen) {
+		@include justify-content(space-around);
+		@include flex-direction(row);
+	}
+}
+
+[class*="grid__column"] {
+	@include transition-property(all 0.2s ease-in);
+	@include align-self(stretch);
+	@include flex(1 1 100%);
+	width: 100%;
+	padding: $gutter $gutter 0;
+	margin: -$gutter auto $gutter;
+}
+
+@for $i from 1 through 12 {
+	.grid__column--#{$i}of12 {
+		@if $i <= 10 {
+			@include media($medium-screen) {
+				@include span-columns(6, block-collapse);
+				@include flex(1 1 50%);
+			}
+		}
+
+		@include media($x-large-screen) {
+			@include span-columns($i, block-collapse);
+			@include flex($i 1 (($i / 12) * 100%) );
+		}
+	}
+}
+
+.grid__cell {
+	width: 100%;
+	padding: $pad;
+}

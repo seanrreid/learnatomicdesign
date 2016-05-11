@@ -1,0 +1,60 @@
+.footer {
+	background: $footer-background;
+	color: $footer-color;
+
+	a {
+		color: $footer-link-color;
+		text-decoration: none;
+
+		&:focus,
+		&:hover,
+		&:active {
+			color: $footer-link-hover;
+		}
+	}
+
+	ul, p {
+		line-height: 1.5em;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			text-align: left;
+			list-style: none;
+			padding-right: 1em;
+		}
+	}
+}
+
+.footer-primary-content,
+.footer-secondary-links {
+	@extend .grid__column--6of12;
+	padding: 0;
+	text-align: center;
+}
+
+.footer-primary-content {
+	@include media($medium-screen) {
+		text-align: left;
+	}
+}
+
+.footer-secondary-links {
+	@include media($medium-screen) {
+		text-align: right;
+	}
+}
+
+.footer-nav {
+	display: inline-block;
+	margin: $pad 0;
+
+	@include media($medium-screen) {
+		margin: ($pad / 2) 0;
+	}
+}
+

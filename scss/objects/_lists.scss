@@ -1,0 +1,27 @@
+.list--single-line {
+	width: 100%;
+	display: inline-block;
+
+	li {
+		display: inline-block;
+
+		@include media($medium-screen) {
+			float: left;
+		}
+	}
+}
+
+.list--breadcrumbs {
+	@extend .list--single-line;
+	text-transform: capitalize;
+	font-size: 15px;
+	margin-bottom: em(8);
+
+	.breadcrumb:not(:last-child) {
+		margin-right: rem(8);
+
+		&:after {
+			content: '\203A';
+		}
+	}
+}

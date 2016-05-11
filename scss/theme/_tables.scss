@@ -1,0 +1,58 @@
+table {
+	.thin,
+	.wide {
+		width: auto;
+	}
+
+	@include media($medium-screen) {
+		.thin {
+			width: 25%;
+		}
+		.wide {
+			width: 50%;
+		}
+	}
+}
+
+.table--large {
+	@extend %responsive-tables-large;
+	display: table;
+  	margin: 0 auto 2em;
+
+  	tr th {
+    	padding: em(4);
+  	}
+
+	td {
+		padding: rem(8);
+	}
+
+  	td:before {
+    	font-weight: bold;
+  	}
+
+  	@include media($large-screen) {
+		table-layout: auto;
+
+	  	td {
+			padding: rem(4) 0;
+		}
+  	}
+}
+
+th {
+  @include media($large-screen) {
+  	border-bottom: 1px solid color($gray-map, light);
+  }
+}
+
+td {
+	border: 0;
+
+	@include media($large-screen) {
+
+  	&:first-child {
+  		background-color: transparent;
+  	}
+  }
+}

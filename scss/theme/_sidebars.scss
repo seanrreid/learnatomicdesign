@@ -1,0 +1,11 @@
+.sidebar {
+  padding-bottom: $pad;
+
+  .title {
+  	margin: 1em auto em(8); 
+
+  	&:first-child {
+  		margin-top: 0;
+  	}
+  }
+}

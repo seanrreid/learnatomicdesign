@@ -1,0 +1,68 @@
+/* Text Blocks */
+.title {
+	display: inline-block;
+	width: 100%;
+	text-transform: capitalize;
+	margin-top: em(4); // Titles should have slightly less top margin than the default for the H1-H6 elements
+}
+
+.title--alt,
+.subtitle {
+	text-transform: uppercase;
+}
+
+// A headline can be a title element, or a title element container. 
+// Headlines are rows, whereas a title can be a row or a block. 
+.headline {
+	margin-top: 0;
+
+	h1, h2 {
+		margin: 0 auto em(12);
+	}
+}
+
+.lead-text {
+	display: inline-block;
+	margin: 0 auto em(8);
+	text-transform: uppercase;
+
+	@include media($medium-screen) {
+		margin: 0 em(12) 0 auto;
+	}
+}
+
+.callout {
+	padding: 1rem;
+	text-align: center;
+
+	@include media($large-screen) {
+		font-size: 14px;
+	}
+}
+
+.notification-message {
+	@extend .callout;
+	position: relative;
+	width: auto;
+	max-width: rem(400);
+	margin: 1em auto;
+
+	p {
+		width: auto;
+		margin: 0 auto;
+	}
+}
+
+.tooltip {
+	@extend .small;
+}
+
+.trademark {
+	@extend .small;
+	margin-top: -1em;
+}
+
+.emphasis {
+	@extend h4;
+	font-weight: bold;
+}

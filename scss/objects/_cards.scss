@@ -1,0 +1,48 @@
+$card-image-hover-opacity: 0.7;
+$card-image-hover-color: $white;
+
+.cards {
+  @extend %flex__wrapper;
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  font-size: 14px;
+}
+
+.card {
+  @extend %flex__box;
+  @include flex-basis(20em);
+  line-height: 1;
+  position: relative;
+  margin: ( $base-spacing / 2 ) 1rem;
+}
+
+.card-image {
+  overflow: hidden;
+  background-color: $white;
+
+  img {
+    width: 100%;
+    height: 100%;
+    margin: 0; padding: 0;
+    opacity: 1;
+  }
+}
+
+.card-header {
+  line-height: 1.25em;
+  padding: ($base-spacing / 3) ($base-spacing / 2);
+
+  .title {
+    margin: 0;
+  }
+}
+
+.card-copy {
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: $pad-half;
+
+  p {
+    margin: 0;
+  }
+}

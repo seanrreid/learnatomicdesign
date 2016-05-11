@@ -1,0 +1,125 @@
+// Nav menu
+$sidebarWidth: 18%;
+
+nav {
+	-webkit-transform-style: preserve-3d; // stop webkit flicker
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	position: relative;
+
+	a {
+		display: block;
+		line-height: 1;
+	}
+
+	&.sidebar {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: 100% - $sidebarWidth;
+		left: 0;
+		width: 100%;
+		max-width: $sidebarWidth;
+
+		padding: 1em;
+		border-right: 2px solid color($gray-map, light);
+
+		.NavExpandCollapseTrigger.right {
+			display: none;
+		}
+
+		&.collapsed {
+			right: 100%;
+			max-width: 18px;
+			padding-right: 0;
+			padding-left: 0;
+			overflow: hidden;
+
+			.NavExpandCollapseTrigger {
+				display: block;
+			}
+
+			.NavExpandCollapseTrigger.left,
+			.logo {
+				display: none;
+			}
+		}
+	}
+
+}
+
+.navigation__primary {
+	width: 100%;
+
+	@include media($medium-screen) {
+		width: auto;
+	}
+}
+
+.navigation-menu {
+	display: inline-block;
+	width: 100%;
+	@include display(flex);
+	@include justify-content(center);
+	@include align-items(center);
+
+	.sidebar & {
+		@include flex-direction(column);
+	}
+}
+
+// Temporary Hack pending a refactor - @TORCH
+.primary-nav {
+	@extend .navigation__primary;
+}
+
+// The nav items
+.menu-item {
+	font-size: 1rem;
+	position: relative;
+	overflow: visible;
+	width: 100%;
+
+	@include media($medium-screen) {
+		width: auto;
+	}
+
+	a, p {
+		padding: em(12);
+
+		@include media($medium-screen) {
+			padding: em(12) $pad;
+		}
+	}
+
+	p {
+		margin: 0 auto;
+	}
+}
+
+.breadcrumbs {
+	padding: $pad-half;
+	width: 100%;
+	float: left;
+	font-size: 14px;
+	border-radius: 2px;
+
+	> li {
+		position: relative;
+		float: left;
+		padding: 0 ( $pad / 4 );
+		min-width: 16%;
+		text-align: center;
+
+		&:not(:last-child):after {
+			content: "/";
+			position: absolute;
+			right: -2px;
+		}
+	}
+
+	a {
+		text-transform: uppercase;
+	}
+}
