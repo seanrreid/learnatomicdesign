@@ -1,5 +1,5 @@
 /* Header */
-.header {
+.site-header {
 	position: relative;
 	background-color: $white;
   	color: $primaryTextColor;
@@ -10,16 +10,15 @@
 		padding-bottom: 1rem;
 	}
 
-  	.wrapper--logo {
+  	.site-title {
 		max-width: rem(320);
     	padding: em(8) 1em;
   	}
 
   	@include media($medium-screen) {
-    	.wrapper--logo {
+    	.site-title {
 			max-width: rem(360);
-      	float: left;
-      	padding: 0;
+      		float: left;
     	}
   	}
 }

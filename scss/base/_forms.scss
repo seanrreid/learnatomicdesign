@@ -22,19 +22,9 @@ label {
   }
 }
 
-textarea,
 #{$all-text-inputs},
-select[multiple=multiple] {
+textarea {
   @include transition(border-color);
-  background-color: $white;
-  border-radius: $form-border-radius;
-  border: 1px solid $form-border-color;
-  box-shadow: $form-box-shadow;
-  font-family: $form-font-family;
-  font-size: $form-font-size;
-  margin-bottom: em(8);
-  padding: em(8);
-  width: 100%;
 
   &:hover {
     border-color: $form-border-color-hover;
@@ -45,11 +35,6 @@ select[multiple=multiple] {
     box-shadow: $form-box-shadow-focus;
     outline: none;
   }
-}
-
-%input-short {
-  width: auto;
-  max-width: 25% 
 }
 
 textarea {

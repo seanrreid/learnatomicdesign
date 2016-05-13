@@ -10,10 +10,9 @@
 	}
 }
 
-.primary-nav {
+.navigation__primary {
 	.menu-item {
 		font-weight: bold;
-		max-width: 50%;
 		text-transform: uppercase;
 
 		@include media($medium-screen) {

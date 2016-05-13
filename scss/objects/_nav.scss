@@ -12,41 +12,40 @@ nav {
 		display: block;
 		line-height: 1;
 	}
+}
 
-	&.sidebar {
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		right: 100% - $sidebarWidth;
-		left: 0;
-		width: 100%;
-		max-width: $sidebarWidth;
+nav.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 100% - $sidebarWidth;
+    left: 0;
+    width: 100%;
+    max-width: $sidebarWidth;
 
-		padding: 1em;
-		border-right: 2px solid color($gray-map, light);
+    padding: 1em;
+    border-right: 2px solid color($gray-map, light);
 
-		.NavExpandCollapseTrigger.right {
-			display: none;
-		}
+    .NavExpandCollapseTrigger.right {
+        display: none;
+    }
 
-		&.collapsed {
-			right: 100%;
-			max-width: 18px;
-			padding-right: 0;
-			padding-left: 0;
-			overflow: hidden;
+    &.collapsed {
+        right: 100%;
+        max-width: 18px;
+        padding-right: 0;
+        padding-left: 0;
+        overflow: hidden;
 
-			.NavExpandCollapseTrigger {
-				display: block;
-			}
+        .NavExpandCollapseTrigger {
+            display: block;
+        }
 
-			.NavExpandCollapseTrigger.left,
-			.logo {
-				display: none;
-			}
-		}
-	}
-
+        .NavExpandCollapseTrigger.left,
+        .logo {
+            display: none;
+        }
+    }
 }
 
 .navigation__primary {
@@ -69,17 +68,13 @@ nav {
 	}
 }
 
-// Temporary Hack pending a refactor - @TORCH
-.primary-nav {
-	@extend .navigation__primary;
-}
-
 // The nav items
 .menu-item {
 	font-size: 1rem;
 	position: relative;
 	overflow: visible;
 	width: 100%;
+    text-align: center;
 
 	@include media($medium-screen) {
 		width: auto;

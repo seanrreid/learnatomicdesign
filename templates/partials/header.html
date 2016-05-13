@@ -1,7 +1,9 @@
 <header class="site-header">
     <div class="wrapper">
-        <a href="{{ baseUrl }}/" class="site-title">{{site.title}}</a>
-        <nav class="navigation__primary">
+        <a href="{{ baseUrl }}/" class="site-title">
+            {{site.title}}
+        </a>
+        <nav class="navigation__primary" role="navigation">
             <ul class="navigation-menu">
                 <li class="menu-item"><a href="{{ baseUrl }}/blog">Blog</a></li>
                 {%- for post in collections.pages %}

@@ -1,32 +1,10 @@
-.form {
-	position: relative;
-	width: 100%;
-
-	@extend %pretty-input;
-
-	input, select, button, label {
-		display: inline-block;
-		border-radius: 0;
-		line-height: 1;
-		position: relative;
-	}
-
-	label {
-		position: absolute;
-		top: em(10);
-		left: em(10);
-		color: #f1773b;
-		opacity: 0;
-		z-index: 10;
-	}
-
+form {
 	label > .icon {
 		margin-left: ( $base-spacing / 3 );
 	}
 
 	textarea,
 	#{$all-text-inputs} {
-		padding: ($pad * 2) $pad $pad;
 
 		@include placeholder {
 			color: color($gray-map,base);

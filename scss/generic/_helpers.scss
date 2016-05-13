@@ -24,7 +24,6 @@
 }
 
 // Utility classes
-
 .u-lowercase {
 	text-transform: lowercase;
 }
@@ -33,12 +32,10 @@
     text-transform: uppercase;
 }
 
-.center, // This is legacy and will be removed in favor of the u- syntax
 .u-center {
     text-align: center;
 }
 
-.small, // This is legacy and will be removed in favor of the u- syntax
 .u-small {
     font-size: 1rem;
     display: inline-block;

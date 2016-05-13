@@ -3,7 +3,7 @@ section {
 	background-color: $white;
 }
 
-.content {
+main {
 	@include outer-container(100%);
 	min-height: 70vh;
 	padding-top: 0;
