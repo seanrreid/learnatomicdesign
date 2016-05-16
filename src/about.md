@@ -1,13 +1,13 @@
 ---
-name: About - Learn Atomic Design
+name: About Atomic Design
 template: page.html
 priority: 2
 linkTitle: About
 ----------------
 
-# What is "Atomic Design"?
+## What is "Atomic Design"?
 
-## Atomic Design is a concept originally proposed by web designer Brad Frost.
+### Atomic Design is a concept originally proposed by web designer Brad Frost.
 
 > Atomic design is a methodology composed of five distinct stages working together to create deliberate interface design systems. 
 

@@ -11,6 +11,7 @@
 .splash {
     padding: 0;
     font-weight: bold;
+    font-size: 18px;
 
     .logo {
         @extend %flexible-media;
@@ -29,6 +30,6 @@
     }
 
     @include media($large-screen) {
-        font-size: 24px;
+        font-size: 40px;
     }
 }
