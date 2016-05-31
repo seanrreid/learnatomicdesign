@@ -1,91 +1,31 @@
 ---
-title: This will not show up
-draft: true
+title: Learn Atomic Design via Four Athens
+draft: false
 template: post.html
-date: 2015-05-02
-description: this is just a description
+date: 2016-05-31
+description: Learn Atomic Design is being taught via a partnership with Four Athens.
 author: Sean R Reid
-tags: blah, nodejs, static site, metalsmith
+tags: atomic design, classes, four athens
+excerpt: Learn Atomic Design (and move beyond Bootstrap) will be taught live in Athens, GA starting June 6th...
 ---
 
-There is a significant amount of subtle, yet precisely calibrated, styling to ensure
-that your content is emphasized while still looking aesthetically pleasing.
+It's finally here!
 
-All links are easy to [locate and discern](#), yet don't detract from the harmony
-of a paragraph. The _same_ goes for italics and __bold__ elements. Even the the strikeout
-works if <del>for some reason you need to update your post</del>. For consistency's sake,
-<ins>The same goes for insertions</ins>, of course.
+**Learn Atomic Design (and move beyond Bootstrap)** starts on June 6th.
 
-### Code, with syntax highlighting
+The class will be taught via a partnership with Four Athens and Roundsphere.  The class will run six (6) weeks, and will take place every Monday and Thursday evening from 5:30-7:00. The first class of each week will be used to introduce and discuss a concept.  The second day will be more of a "lab" day, and the focus will be on application of that concept.  Classes will be taught at the Roundsphere Community space.  Roundsphere's address is:
 
-Code blocks use the [solarized](http://ethanschoonover.com/solarized) theme. Both the light and
-dark versions are included, so you can swap them out easily. _Solarized Dark_ is the default.
+1 Press Place Suite 203<br/>
+Athens, GA 30601
 
-```ruby
-class Awesome < ActiveRecord::Base
-  include EvenMoreAwesome
+For those that don't know, this course will be available online once this first session is complete. Four Athens students receive a discount of about 15% from the online version, as well as lifetime access to those materials.  Any feedback provided during the class is greatly appreciated and will be used to improve the course prior to launching online.
 
-  validates_presence_of :something
-  validates :email, email_format: true
+The only requirements for the course are a laptop and a code editor (Atom, Sublime, WebStorm, etc...).  It is highly recommended that you have some experience with the command line, SASS, Gulp (or Grunt), and Github; although please note that these are not strict requirements.
 
-  def initialize(email, name = nil)
-    self.email = email
-    self.name = name
-  end
-end
-```
+Stay tuned for more information about class topics and other announcements prior to June 6th.
 
-# Headings!
+Note about the Fourth of July Holiday:
+July 4th falls on a Monday, therefore class will be cancelled in observance of the holiday.  The last day of class will be Monday, July 18th to account for the cancelled class.
+You can register for the course online via the [Four Athens Classes page](https://www.fourathens.com/intermediateclasses/#tab-htmlcss).
 
-They're responsive, and well-proportioned (in `padding`, `line-height`, `margin`, and `font-size`).
-They also heavily rely on the awesome utility, [BASSCSS](http://www.basscss.com/).
-
-##### They draw the perfect amount of attention
-
-This allows your content to have the proper informational and contextual hierarchy. Yay.
-
-### There are lists, too
-
-  * Apples
-  * Oranges
-  * Potatoes
-  * Milk
-
-  1. Mow the lawn
-  2. Feed the dog
-  3. Dance
-
-### Images look great, too
-
-![desk](https://cloud.githubusercontent.com/assets/1424573/3378137/abac6d7c-fbe6-11e3-8e09-55745b6a8176.png)
-
-
-### There are also pretty colors
-
-Also the result of [BASSCSS](http://www.basscss.com/), you can <span class="bg-dark-gray white">highlight</span> certain components
-of a <span class="red">post</span> <span class="mid-gray">with</span> <span class="green">CSS</span> <span class="orange">classes</span>.
-
-I don't recommend using blue, though. It looks like a <span class="blue">link</span>.
-
-### Stylish blockquotes included
-
-You can use the markdown quote syntax, `>` for simple quotes.
-
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis porta mauris.
-
-However, you need to inject html if you'd like a citation footer. I will be working on a way to
-hopefully sidestep this inconvenience.
-
-<blockquote>
-  <p>
-    Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
-  </p>
-  <footer><cite title="Antoine de Saint-Exupéry">Antoine de Saint-Exupéry</cite></footer>
-</blockquote>
-
-### There's more being added all the time
-
-Checkout the [Github repository](https://github.com/johnotander/pixyll) to request,
-or add, features.
-
-Happy writing.
+Thanks again for your interest, and I look forward to seeing you on June 6th!
