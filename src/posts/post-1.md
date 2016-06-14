@@ -9,6 +9,8 @@ tags: atomic design, classes, four athens
 excerpt: Learn Atomic Design (and move beyond Bootstrap) will be taught live in Athens, GA starting June 6th...
 ---
 
+**UPDATE:** The start date for the class has been changed. More information here: http://learnatomicdesign.com/blog/update-date-change-for-four-athens-class
+
 It's finally here!
 
 **Learn Atomic Design (and move beyond Bootstrap)** starts on June 6th.

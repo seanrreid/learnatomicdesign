@@ -1,24 +1,26 @@
 {% extends './default.html' %}
 
 {% block content %}
-<article class="splash">
+<section class="splash">
     <div class="wrapper">
         <img src="../images/logo--learnatomicdesign.jpg" class="logo" title="Learn Atomic Design" alt="Learn Atomic Design Logo"/>
         {{contents | safe}}
     </div>
-</article>
-{% endblock %}
-{% block announcements %}
-<article class="announcement">
+</section>
+
+<section class="posts">
     <div class="wrapper">
-        <h3><strong>Learn Atomic Design is coming to Athens, GA!</strong></h3>
-        <p>I will be teaching Learn Atomic Design as a six week course in partnership with Four Athens. </p>
-        <p>You can sign up for the course via <a href="https://www.fourathens.com/intermediateclasses/#tab-htmlcss" title="Classes at Four Athens">the Four Athens Classes page</a></p>
-        <p>You can learn more about the course via the blog: <a href="/blog/learn-atomic-design-via-four-athens/" title="Learn Atomic Design via Four Athens Blog Post">Learn Atomic Design via Four Athens</a>.</p>
+        {% for post in collections.posts %}
+        <article class="post">
+            <p class="post-meta">{{ post.date | date('M j, Y') }}</p>
+            <a href="{{baseUrl}}/{{post.path}}" class="post-link"><h3 class="headline">{{post.title}}</h3></a>
+        </article>
+        {% endfor %}
     </div>
-</article>
-<article class="callout--signup">
-    <div class="mailchimp-signup wrapper">
+</section>
+
+<section class="callout--signup">
+    <article class="mailchimp-signup wrapper">
         <!-- Begin MailChimp Signup Form -->
         <div id="mc_embed_signup" class="form-group">
             <form action="//torchcodelab.us6.list-manage.com/subscribe/post?u=e48bbeb07e5219592b91e283c&amp;id=7329ad1c66"
@@ -53,6 +55,6 @@
         }(jQuery));
         var $mcj = jQuery.noConflict(true);</script>
         <!--End mc_embed_signup-->
-    </div>
-</article>
+    </article>
+</section>
 {% endblock %}
